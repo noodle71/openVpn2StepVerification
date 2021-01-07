@@ -8,7 +8,7 @@ set pass [lindex $argv 1]
 set googleAuthSecret [lindex $argv 2]
 set openVpnConfigFile [lindex $argv 3]
 
-set googleAuthToken [exec python createToken.py $googleAuthSecret]
+set googleAuthToken [exec python3 createToken.py $googleAuthSecret]
 if { $nArgs >= 4 } {
   # Access to device
   spawn sudo openvpn $openVpnConfigFile
